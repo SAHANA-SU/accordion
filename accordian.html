@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .accordion {
+                 background-color:black;
+                 color:chartreuse;
+                 cursor: pointer;
+                 padding: 18px;
+                 width: 100%;
+                 border: none;
+                 text-align:center;
+                 font-size: 20px;
+            }
+            .active, .accordion:hover {
+                 background-color:black;
+                 
+            }
+
+            .panel {
+                 padding: 0 18px;
+                 display: none;
+                 background-color:darkgrey;
+        }
+        </style>
+    </head>
+    <body>
+        <button class="accordion">HTML</button>
+        <div class="panel">
+            <p>
+                HYPER TEXT MARKUP LANGUAGE
+            </p>
+        </div>
+
+        <button class="accordion">CSS</button>
+        <div class="panel">
+            <p>Cascading style sheet</p>
+        </div>
+
+        <button class="accordion">JAVASCRIPT</button>
+        <div class="panel">
+            <p>It is a programming language that conforms to the ECMAScript specification</p>
+        </div>
+
+        <script>
+            var x = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < x.length; i++) {
+              x[i].addEventListener("click", function()
+               {
+                var panel = this.nextElementSibling;
+                if (panel.style.display == "block")
+                 {
+                  panel.style.display = "none";
+                } 
+                else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+            </script>
+ 
+    </body>
+</html>
